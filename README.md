@@ -55,7 +55,7 @@ Use semicolons `;`
 
 ## Commas
 
-Don's use leading commas.
+Don't use leading commas.
 
   ```javascript
   // bad
