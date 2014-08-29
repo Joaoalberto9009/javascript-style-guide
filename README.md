@@ -83,9 +83,9 @@ Don't use leading commas.
   };
 
   // good
-  (function() {
+  function() {
     return 'Evernote';
-  })();
+  }
   ```
 
 **[⬆ back to top](#table-of-contents)**
