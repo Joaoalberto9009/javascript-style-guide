@@ -41,14 +41,14 @@ Use semicolons `;`
 
   ```javascript
   // bad
-  (function() {
+  function() {
     return 'Evernote'
-  })();
+  }
 
   // good
-  (function() {
+  function() {
     return 'Evernote';
-  })();
+  }
   ```
 
 **[⬆ back to top](#table-of-contents)**
