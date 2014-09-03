@@ -44,21 +44,21 @@ Use semicolons `;`
 
   ```javascript
   // bad
-  (function() {
+  function() {
     return 'Evernote'
-  })();
+  }
 
   // good
-  (function() {
+  function() {
     return 'Evernote';
-  })();
+  }
   ```
 
 **[⬆ back to top](#table-of-contents)**
 
 ## Commas
 
-Don's use leading commas.
+Don't use leading commas.
 
   ```javascript
   // bad
@@ -86,9 +86,9 @@ Don's use leading commas.
   };
 
   // good
-  (function() {
+  function() {
     return 'Evernote';
-  })();
+  }
   ```
 
 **[⬆ back to top](#table-of-contents)**
