@@ -7,7 +7,10 @@ Evernote Javascript style guide
   2. [Variables](#variables)
   3. [Semicolons](#semicolons)
   4. [Commas](#commas)
-  5. [Naming Conventions](#naming-conventions)
+  5. [Declaring Strict Mode](#declaring-strict-mode)
+  6. [Naming Conventions](#naming-conventions)
+  7. [Conditional Expressions](#conditional-expressions)
+  8. [Blocks](#Blocks)
 
 ## Strings
 
@@ -111,7 +114,7 @@ Don's use leading commas.
   ```javascript
   // bad
   var OBject = {};
-  var this_is_my_object = {};
+  var heres_an_object = {};
   function c() {}
   var u = new user({
     name: 'Evernote';
@@ -128,4 +131,51 @@ Don's use leading commas.
 **[⬆ back to top](#table-of-contents)**
 
 
+## Declaring Strict Mode
 
+Declare `'use strict'` in all your JavaScript files.
+
+
+**[⬆ back to top](#table-of-contents)**
+
+##Conditional Expressions
+
+Use `===` and `!==`
+
+```javascript
+  // bad
+  var name = 'Eva Note';
+  if(name == 'Eva Note'){}
+
+  if(name != 'Eva Note'){}
+
+  // good
+  var name = 'Eva Note';
+  if(name === 'Eva Note'){}
+
+  if(name !== 'Eva Note'){}
+  ```
+**[⬆ back to top](#table-of-contents)**
+
+
+##Blocks
+
+Use braces when there are multi-line blocks.
+
+```javascript
+  // bad
+  if (name)
+  return false;
+
+  // good
+  if (name) return false;
+
+  // bad
+  if (name){return false};
+
+  // good
+  if (name){
+    return false;
+  }
+  ```
+**[⬆ back to top](#table-of-contents)**
