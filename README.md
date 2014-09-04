@@ -10,8 +10,13 @@ Evernote Javascript style guide
   5. [Declaring Strict Mode](#declaring-strict-mode)
   6. [Naming Conventions](#naming-conventions)
   7. [Conditional Expressions](#conditional-expressions)
-  8. [Blocks](#Blocks)
+  8. [Blocks](#blocks)
   9. [Tab Spacing](#tab-spacing)
+  10. [Types](#types)
+  11. [Objects](#objects)
+  12. [Arrays](#arrays)
+  13. [Properties](#properties)
+  14. [Accessors](#accessors)
 
 ## Strings
 
@@ -196,4 +201,210 @@ Use two spaces for tabs
   ∙∙return true;
   }
   ```
+**[⬆ back to top](#table-of-contents)**
+
+## Types
+
+  - **Primitives**: When you access a primitive type you work directly on its value
+
+    + `string`
+    + `number`
+    + `boolean`
+    + `null`
+    + `undefined`
+
+    ```javascript
+    var foo = 1,
+        bar = foo;
+
+    bar = 9;
+
+    console.log(foo, bar); // => 1, 9
+    ```
+  - **Complex**: When you access a complex type you work on a reference to its value
+
+    + `object`
+    + `array`
+    + `function`
+
+    ```javascript
+    var foo = [1, 2],
+        bar = foo;
+
+    bar[0] = 9;
+
+    console.log(foo[0], bar[0]); // => 9, 9
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Objects
+
+  - Use the literal syntax for object creation.
+
+    ```javascript
+    // bad
+    var item = new Object();
+
+    // good
+    var item = {};
+    ```
+
+  - Don't use [reserved words](http://es5.github.io/#x7.6.1) as keys. It won't work in IE8.
+
+    ```javascript
+    // bad
+    var superman = {
+      default: { clark: 'kent' },
+      private: true
+    };
+
+    // good
+    var superman = {
+      defaults: { clark: 'kent' },
+      hidden: true
+    };
+    ```
+
+  - Use readable synonyms in place of reserved words.
+
+    ```javascript
+    // bad
+    var superman = {
+      class: 'alien'
+    };
+
+    // bad
+    var superman = {
+      klass: 'alien'
+    };
+
+    // good
+    var superman = {
+      type: 'alien'
+    };
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Arrays
+
+  - Use the literal syntax for array creation
+
+    ```javascript
+    // bad
+    var items = new Array();
+
+    // good
+    var items = [];
+    ```
+
+  - If you don't know array length use Array#push.
+
+    ```javascript
+    var someStack = [];
+
+
+    // bad
+    someStack[someStack.length] = 'abracadabra';
+
+    // good
+    someStack.push('abracadabra');
+    ```
+
+  - When you need to copy an array use Array#slice. [jsPerf](http://jsperf.com/converting-arguments-to-an-array/7)
+
+    ```javascript
+    var len = items.length,
+        itemsCopy = [],
+        i;
+
+    // bad
+    for (i = 0; i < len; i++) {
+      itemsCopy[i] = items[i];
+    }
+
+    // good
+    itemsCopy = items.slice();
+    ```
+
+  - To convert an array-like object to an array, use Array#slice.
+
+    ```javascript
+    function trigger() {
+      var args = Array.prototype.slice.call(arguments);
+      ...
+    }
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
+## Properties
+
+  - Use dot notation when accessing properties.
+
+    ```javascript
+    var evernote = {
+      elephant: true,
+      remember: true
+    };
+
+    // bad
+    var isElephant = evernote['elephant'];
+
+    // good
+    var isElephant = evernote.elephant;
+    ```
+
+  - Use subscript notation `[]` when accessing properties with a variable.
+
+    ```javascript
+    var evernote = {
+      elephant: true,
+      remember: true
+    };
+
+    function getProp(prop) {
+      return evernote[prop];
+    }
+
+    var isElephant = getProp('elephant');
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Accessors
+
+  - Accessor functions for properties are not required
+  - If you do make accessor functions use getVal() and setVal('hello')
+
+    ```javascript
+    // bad
+    elephant.age();
+
+    // good
+    elephant.getAge();
+
+    // bad
+    elephant.age(25);
+
+    // good
+    elephant.setAge(25);
+    ```
+
+  - If the property is a boolean, use isVal() or hasVal()
+
+    ```javascript
+    // bad
+    if (!elephant.age()) {
+      return false;
+    }
+
+    // good
+    if (!elephant.hasAge()) {
+      return false;
+    }
+    ```
+
 **[⬆ back to top](#table-of-contents)**
