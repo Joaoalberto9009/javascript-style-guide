@@ -1,6 +1,8 @@
 Evernote Javascript style guide
 ======================
 
+*Keeping our JavaScript more consistent*
+
 ## Table of Contents
 
   1. [Strings](#strings)
