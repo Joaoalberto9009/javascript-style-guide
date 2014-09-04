@@ -1,7 +1,7 @@
 Evernote Javascript style guide
 ======================
 
-Base from [AirBnB's style guide](https://github.com/airbnb/javascript).
+Based off of [AirBnB's style guide](https://github.com/airbnb/javascript).
 
 *Keeping our JavaScript more consistent*
 
