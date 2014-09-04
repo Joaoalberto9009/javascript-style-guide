@@ -44,18 +44,18 @@ Use single quotes `''` for strings instead of double quotes `""`
 
 ## Variables
 
-Declarations with `var` for each varible.
+Declarations for `var` as follows:
 
   ```javascript
   // bad
-  var a = 1,
-   b = 2,
-   c = 'string';
-
-  // good
   var a = 1;
   var b = 2;
   var c = 'string';
+
+  // good
+  var a = 1,
+   b = 2,
+   c = 'string';
   ```
 **[⬆ back to top](#table-of-contents)**
 
