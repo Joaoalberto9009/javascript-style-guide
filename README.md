@@ -11,6 +11,7 @@ Evernote Javascript style guide
   6. [Naming Conventions](#naming-conventions)
   7. [Conditional Expressions](#conditional-expressions)
   8. [Blocks](#Blocks)
+  9. [Tab Spacing](#tab-spacing)
 
 ## Strings
 
@@ -176,6 +177,23 @@ Use braces when there are multi-line blocks.
   // good
   if (name){
     return false;
+  }
+  ```
+**[⬆ back to top](#table-of-contents)**
+
+##Tab Spacing
+
+Use two spaces for tabs
+
+```javascript
+  // bad
+  function() {
+  ∙∙∙∙return true;
+  }
+
+  // good
+  function() {
+  ∙∙return true;
   }
   ```
 **[⬆ back to top](#table-of-contents)**
