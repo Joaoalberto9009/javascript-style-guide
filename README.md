@@ -21,7 +21,8 @@ Based off of [AirBnB's style guide](https://github.com/airbnb/javascript).
   12. [Arrays](#arrays)
   13. [Properties](#properties)
   14. [Accessors](#accessors)
-  15. [License](#license)
+  15. [Tools](#tools)
+  16. [License](#license)
 
 ## Strings
 
@@ -425,6 +426,19 @@ Use two spaces for tabs
 
 **[⬆ back to top](#table-of-contents)**
 
+## Tools
+
+#### Sublime
+  - [JSHint](https://github.com/uipoet/sublime-jshint)
+  - [jsfmt](https://github.com/paulirish/sublime-jsfmt)
+
+#### Grunt
+  - [JSHint](https://github.com/gruntjs/grunt-contrib-jshint)
+
+#### Gulp
+  - [JSHint](https://github.com/spenceralger/gulp-jshint)
+
+**[⬆ back to top](#table-of-contents)**
 
 ## License
 
